@@ -1,0 +1,133 @@
+<p>Accounts submission screen</p>
+
+
+<div class="form-inline" >
+    <div class="form-group col-lg-12">
+        
+      <p>Select Search Criteria :-</p>
+  
+    <select [(ngModel)]="searchCriteria" class="form-control" id="sel1">        
+        <optgroup label="Enter Account Number">
+            <option value=singleAccount>Add single account</option>
+            <option value=bulkAddition>Bulk addition</option>
+        </optgroup>
+  
+        <optgroup label="Action">
+          <option value=approve>Approve</option>
+          <option value=reject>Reject</option>
+        </optgroup>
+  
+        
+    </select>
+  
+      <button (click)="selectOption()">Submit Option</button>
+  
+     </div>
+</div>
+<!--<div class="container" style="margin-top: 70px;" *ngIf="selectAccountAction==='add' && submitted==='false'">-->
+    <div class="container" style="margin-top: 70px;"*ngIf=false>
+
+    <div class="row">
+  
+      <div class="col-sm-8 offset-sm-2">
+  
+        <div>
+          <form>
+            <div class="form-group">
+              
+  
+              <label for="accNumber">Enter Account Number to add</label>
+              <input type="text" id="accNumber" name="accNumber" [(ngModel)]="accNumber" class="form-control">
+              
+    
+            </div>
+          </form>
+          <button class="btn btn-primary" type="submit" (click)="submitAccountDetails()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" style="margin-top: 70px;" *ngIf="selectAccountAction==='approveAccount' && submitted==='false'">
+
+    <div class="row">
+  
+      <div class="col-sm-8 offset-sm-2">
+  
+        <div>
+          <form>
+            <div class="form-group">
+              
+  
+              <label for="accNumber">Enter Account Number to add</label>
+              <input type="text" id="accNumber" name="accNumber" [(ngModel)]="accNumber" class="form-control">
+
+              <label for="submittedBy">Enter your name</label>
+              <input type="text" id="submittedBy" name="submittedBy" [(ngModel)]="submittedBy" class="form-control">
+              
+    
+            </div>
+          </form>
+          <button class="btn btn-primary" type="submit" (click)="submitAccountDetails()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" style="margin-top: 70px;" *ngIf="selectAccountAction==='rejectAccount' && submitted==='false'">
+
+    <div class="row">
+  
+      <div class="col-sm-8 offset-sm-2">
+  
+        <div>
+          <form>
+            <div class="form-group">
+              
+  
+              <label for="accNumber">Enter Account Number to Reject </label>
+              <input type="text" id="accNumber" name="accNumber" [(ngModel)]="accNumber" class="form-control">
+
+              <label for="submittedBy">Enter your name</label>
+              <input type="text" id="submittedBy" name="submittedBy" [(ngModel)]="submittedBy" class="form-control">
+              
+    
+            </div>
+          </form>
+          <button class="btn btn-primary" type="submit" (click)="submitRejectAccount()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container" style="margin-top: 70px;" *ngIf="selectAccountAction==='addSingleAccount'">
+
+    <div class="row">
+  
+      <div class="col-sm-8 offset-sm-2">
+  
+        <div>
+          <form>
+            <div class="form-group">
+              
+  
+              <label for="accNumber">Enter Account Number to add</label>
+              <input type="text" id="accNumber" name="accNumber" [(ngModel)]="accNumber" class="form-control">
+
+              <label for="submittedBy">Enter your name</label>
+              <input type="text" id="submittedBy" name="submittedBy" [(ngModel)]="submittedBy" class="form-control">
+              
+    
+            </div>
+          </form>
+          <button class="btn btn-primary" type="submit" (click)="submitSingleAccount()">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
